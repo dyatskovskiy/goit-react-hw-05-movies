@@ -6,7 +6,7 @@ import { MoviesContainer } from './Home.styled';
 import { Movie } from 'components/Movie/Movie';
 
 export default function Home() {
-  const [TrendingMovies, setTrendingMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <h1>Trending today</h1>
       <MoviesContainer>
-        {TrendingMovies.map(({ id, title, backdrop_path }) => {
+        {trendingMovies.map(({ id, title, backdrop_path }) => {
           return (
             <Link to={`/movies/${id}`} key={id}>
               <Movie id={id} title={title} poster={backdrop_path} />

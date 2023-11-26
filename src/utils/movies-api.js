@@ -10,5 +10,7 @@ export const fetchTrendingMovies = async () => {
 };
 
 export const fetchMovieDetailsById = async movieId => {
-  return await axios.get(`/3/movie/${movieId}?api_key=${API_KEY}`);
+  return await axios
+    .get(`/3/movie/${movieId}?api_key=${API_KEY}`)
+    .then(r => r.data);
 };
