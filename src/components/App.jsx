@@ -1,24 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+
+import { Header } from './Header/Header';
 import Home from 'pages/Home/Home';
 import MovieDetails from 'pages/MovieDetails/MovieDetails';
 import Movies from 'pages/Movies';
-import { NavLink, Routes, Route } from 'react-router-dom';
 
 export const App = () => {
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/movies">Movies</NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
