@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { fetchTrendingMovies } from '../../utils/movies-api';
-import { MoviesContainer } from './Home.styled';
 import { Movie } from 'components/Movie/Movie';
+import { PageContainer, PageTitle, MoviesContainer } from './Home.styled';
 
 export default function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -21,8 +20,8 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <h1>Trending today</h1>
+    <PageContainer>
+      <PageTitle>Trending today</PageTitle>
       <MoviesContainer>
         {trendingMovies.map(({ id, title, backdrop_path }) => {
           return (
@@ -32,6 +31,6 @@ export default function Home() {
           );
         })}
       </MoviesContainer>
-    </>
+    </PageContainer>
   );
 }

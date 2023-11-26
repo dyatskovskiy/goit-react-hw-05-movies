@@ -1,6 +1,14 @@
 import { useParams } from 'react-router-dom';
-import { fetchMovieDetailsById } from '../utils/movies-api';
+import { fetchMovieDetailsById } from '../../utils/movies-api';
 import { useEffect, useState } from 'react';
+import {
+  MovieLayout,
+  MovieTitle,
+  OverviewTitle,
+  Overview,
+  GenresTitle,
+  Genres,
+} from './MovieDetails.styled';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -18,34 +26,31 @@ export default function MovieDetails() {
     getMovieDetails();
   }, [movieId]);
 
-  // const {
-  //   backdrop_path: poster,
-  //   title,
-  //   vote_average: score,
-  //   overview,
-  //   genres,
-  // } = movie;
   return (
     <>
       {movie && (
-        <div>
+        <MovieLayout>
           <img
-            src={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+            src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
+            width="300"
           />
+
           <div>
-            <h2>{movie.title}</h2>
-            <p>User score: {Math.ceil(movie.vote_average * 10)}%</p>
-            <h3>Overview</h3>
-            <p>{movie.overview}</p>
-            <h3>Genres</h3>
-            <ul>
+            <MovieTitle>{movie.title}</MovieTitle>
+            <span>
+              <b>User score: </b> {Math.ceil(movie.vote_average * 10)} %
+            </span>
+            <OverviewTitle>Overview</OverviewTitle>
+            <Overview>{movie.overview}</Overview>
+            <GenresTitle>Genres</GenresTitle>
+            <Genres>
               {movie.genres.map(genre => {
                 return <li key={genre.id}>{genre.name}</li>;
               })}
-            </ul>
+            </Genres>
           </div>
-        </div>
+        </MovieLayout>
       )}
     </>
   );
