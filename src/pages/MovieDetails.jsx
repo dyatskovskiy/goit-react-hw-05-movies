@@ -1,5 +1,8 @@
-import { fetchMovieDetailsById } from '../utils/movies-api';
+import { useParams } from 'react-router-dom';
+// import { fetchMovieDetailsById } from '../utils/movies-api';
 
-export default async function MovieDetails() {
-  return <div>MovieDetails</div>;
+export default function MovieDetails() {
+  const { movieId } = useParams();
+
+  return <div>MovieDetails - {movieId} </div>;
 }

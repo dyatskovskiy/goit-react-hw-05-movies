@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { fetchTrendingMovies } from '../../utils/movies-api';
 import { MoviesContainer } from './Home.styled';
 import { Movie } from 'components/Movie/Movie';
@@ -24,12 +26,9 @@ export default function Home() {
       <MoviesContainer>
         {TrendingMovies.map(({ id, title, backdrop_path }) => {
           return (
-            <Movie
-              key={id}
-              id={id}
-              title={title}
-              poster={backdrop_path}
-            ></Movie>
+            <Link to={`/movies/${id}`} key={id}>
+              <Movie id={id} title={title} poster={backdrop_path} />
+            </Link>
           );
         })}
       </MoviesContainer>

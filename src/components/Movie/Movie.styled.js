@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MovieItem = styled.li`
+export const MovieItem = styled.div`
   height: 170px;
   text-align: center;
   border: 1px solid black;
