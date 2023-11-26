@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import { fetchTrendingMovies } from './utils/movies-api';
+import { fetchTrendingMovies } from '../../utils/movies-api';
+import { MoviesContainer } from './Home.styled';
+import { Movie } from 'components/Movie/Movie';
 
 export default function Home() {
   const [TrendingMovies, setTrendingMovies] = useState([]);
@@ -21,21 +21,18 @@ export default function Home() {
   return (
     <>
       <h1>Trending today</h1>
-      <ul>
+      <MoviesContainer>
         {TrendingMovies.map(({ id, title, backdrop_path }) => {
           return (
-            <li key={id}>
-              <Link to={`${id}`}>
-                {title}
-                <img
-                  src={`http://image.tmdb.org/t/p/w185/${backdrop_path}`}
-                  alt=""
-                />
-              </Link>
-            </li>
+            <Movie
+              key={id}
+              id={id}
+              title={title}
+              poster={backdrop_path}
+            ></Movie>
           );
         })}
-      </ul>
+      </MoviesContainer>
     </>
   );
 }
