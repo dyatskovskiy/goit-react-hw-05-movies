@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Outlet } from 'react-router-dom';
 import { fetchMovieDetailsById } from '../../utils/movies-api';
 import { useEffect, useState } from 'react';
 import {
@@ -9,6 +9,7 @@ import {
   GenresTitle,
   Genres,
 } from './MovieDetails.styled';
+import { Information } from 'components/Information/Information';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -29,28 +30,32 @@ export default function MovieDetails() {
   return (
     <>
       {movie && (
-        <MovieLayout>
-          <img
-            src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            alt={movie.title}
-            width="300"
-          />
+        <>
+          <MovieLayout>
+            <img
+              src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt={movie.title}
+              width="300"
+            />
 
-          <div>
-            <MovieTitle>{movie.title}</MovieTitle>
-            <span>
-              <b>User score: </b> {Math.ceil(movie.vote_average * 10)} %
-            </span>
-            <OverviewTitle>Overview</OverviewTitle>
-            <Overview>{movie.overview}</Overview>
-            <GenresTitle>Genres</GenresTitle>
-            <Genres>
-              {movie.genres.map(genre => {
-                return <li key={genre.id}>{genre.name}</li>;
-              })}
-            </Genres>
-          </div>
-        </MovieLayout>
+            <div>
+              <MovieTitle>{movie.title}</MovieTitle>
+              <span>
+                <b>User score: </b> {Math.ceil(movie.vote_average * 10)} %
+              </span>
+              <OverviewTitle>Overview</OverviewTitle>
+              <Overview>{movie.overview}</Overview>
+              <GenresTitle>Genres</GenresTitle>
+              <Genres>
+                {movie.genres.map(genre => {
+                  return <li key={genre.id}>{genre.name}</li>;
+                })}
+              </Genres>
+            </div>
+          </MovieLayout>
+          <Information />
+          <Outlet />
+        </>
       )}
     </>
   );

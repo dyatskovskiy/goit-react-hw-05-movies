@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const MovieLayout = styled.div`
   display: flex;
-  max-width: 1200px;
   margin: 0 auto;
   gap: 24px;
 `;

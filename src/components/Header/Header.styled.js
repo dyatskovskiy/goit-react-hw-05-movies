@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderLayout = styled.header`
+  width: 100vw;
   height: 40 px;
   padding: 24px;
   margin-bottom: 40px;
