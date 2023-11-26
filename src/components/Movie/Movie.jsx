@@ -1,10 +1,12 @@
-import { MovieItem, Poster } from './Movie.styled';
+import { CardInfo, MovieItem } from './Movie.styled';
 
-export const Movie = ({ id, title, poster }) => {
+export const Movie = ({ title, poster }) => {
   return (
     <MovieItem>
-      <Poster src={`http://image.tmdb.org/t/p/w500/${poster}`} alt={title} />
-      <span>{title}</span>
+      <img src={`http://image.tmdb.org/t/p/w500/${poster}`} alt={title} />
+      <CardInfo>
+        <p>{title}</p>
+      </CardInfo>
     </MovieItem>
   );
 };
