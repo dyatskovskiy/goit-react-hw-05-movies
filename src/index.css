@@ -30,7 +30,9 @@ img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
-
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
 }

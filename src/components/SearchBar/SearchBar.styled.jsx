@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { BiSearchAlt } from 'react-icons/bi';
 
 export const SearchForm = styled.form`
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
   width: 100%;
