@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderLayout = styled.header`
-  background-color: #8ba7dd;
+  background-color: #9eb7e7;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   margin: 0 auto;
@@ -10,9 +10,9 @@ export const HeaderLayout = styled.header`
   height: 40 px;
   padding: 24px;
   margin-bottom: 40px;
-  -webkit-box-shadow: 0px 12px 93px -3px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 0px 12px 93px -3px rgba(255, 255, 255, 1);
-  box-shadow: 0px 12px 93px -3px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 12px 93px -3px #675101;
+  -moz-box-shadow: 0px 12px 93px -3px #675101;
+  box-shadow: 0px 12px 93px -3px #675101;
 `;
 
 export const Navigation = styled.ul`
@@ -25,9 +25,9 @@ export const Navigation = styled.ul`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 24px;
-  color: black;
+  color: #252525;
 
   &.active {
-    color: #b42410;
+    color: #b50000;
   }
 `;

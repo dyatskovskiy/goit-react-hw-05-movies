@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const MovieItem = styled.div`
   text-align: center;
-  border: 1px solid #5b2d2d;
+  border: 1px solid #8abdff66;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,6 @@ export const CardInfo = styled.div`
 
 export const StyledLink = styled(Link)`
   height: 100%;
-  text-decoration: none;
   color: #1d1d1d;
+  background-color: #071227;
 `;

@@ -11,9 +11,7 @@ export const InformationLayout = styled.ul`
   padding: 20px 48px;
 `;
 export const StyledLink = styled(Link)`
-  color: black;
   font-size: 24px;
-  text-decoration: none;
   width: 150px;
   height: 30px;
   color: #252525;

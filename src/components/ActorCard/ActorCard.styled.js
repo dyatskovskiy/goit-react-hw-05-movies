@@ -21,7 +21,8 @@ export const CardInfo = styled.div`
 `;
 
 export const Name = styled.p`
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   margin-bottom: 10px;
 `;
 
