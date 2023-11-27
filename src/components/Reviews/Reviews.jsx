@@ -1,9 +1,4 @@
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
-import {
-  AuthorName,
-  Item,
-  ReviewText,
-} from 'components/ReviewItem/ReviewItem.styled';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchReviews } from 'utils/movies-api';

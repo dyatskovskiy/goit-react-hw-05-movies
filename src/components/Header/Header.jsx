@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { HeaderLayout, Navigation, StyledNavLink } from './Header.styled';
 
 export const Header = () => {
