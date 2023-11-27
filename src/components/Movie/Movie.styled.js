@@ -8,7 +8,14 @@ export const MovieItem = styled.div`
   flex-direction: column;
 `;
 
+export const MovieItemImage = styled.img`
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+`;
+
 export const CardInfo = styled.div`
+  font-size: 16px;
   padding: 5px 0;
-  height: 50px;
+  height: 79px;
 `;
