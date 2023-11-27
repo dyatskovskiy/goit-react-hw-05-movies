@@ -12,7 +12,7 @@ export const SearchBar = ({ query }) => {
   const onUpdateQuery = evt => {
     evt.preventDefault();
     const searchQuery = evt.target.elements.search.value.trim();
-    console.log(searchQuery);
+
     if (!searchQuery) {
       return alert('Enter movie, please ');
     }
