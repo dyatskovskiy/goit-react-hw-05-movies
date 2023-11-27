@@ -12,21 +12,21 @@ export const Label = styled.p`
   margin-bottom: 5rem;
   color: #9ca3af;
 `;
-export const Title = styled.div`
+export const Title = styled.p`
   text-align: center;
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #313131;
+  color: #96adf1;
 `;
 
-export const Text = styled.div`
+export const Text = styled.p`
   text-align: center;
   max-width: 500px;
   margin: auto;
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #313131;
+  color: #96adf1;
 `;
 
 export const Button = styled.button`
