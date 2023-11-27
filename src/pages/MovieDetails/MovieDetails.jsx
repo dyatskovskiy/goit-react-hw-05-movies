@@ -11,20 +11,27 @@ import {
   StyledBackLink,
 } from './MovieDetails.styled';
 import { Information } from 'components/Information/Information';
+import { Loader } from 'components/Loader/Loader';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
   const location = useLocation();
   const prevPage = useRef(location);
 
   useEffect(() => {
     async function getMovieDetails() {
+      setIsLoading(true);
+
       try {
         const movieDetails = await fetchMovieDetailsById(movieId);
         setMovie(movieDetails);
       } catch (error) {
         alert(error.message);
+      } finally {
+        setIsLoading(false);
       }
     }
     getMovieDetails();
@@ -58,6 +65,7 @@ export default function MovieDetails() {
                 })}
               </Genres>
             </div>
+            {isLoading && <Loader />}
           </MovieLayout>
           <Information />
           <Outlet />

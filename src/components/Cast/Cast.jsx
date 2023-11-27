@@ -3,19 +3,24 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchActors } from 'utils/movies-api';
 import { ActorList } from './Cast.styled';
+import { Loader } from 'components/Loader/Loader';
 
 export const Cast = () => {
-  const { movieId } = useParams();
-
   const [actorData, setActorData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const { movieId } = useParams();
 
   useEffect(() => {
     async function getActorData() {
+      setIsLoading(true);
+
       try {
         const fetchedData = await fetchActors(movieId);
         setActorData(fetchedData);
       } catch (error) {
         alert(error.message);
+      } finally {
+        setIsLoading(false);
       }
     }
     getActorData();
@@ -23,7 +28,8 @@ export const Cast = () => {
 
   return (
     <>
-      {actorData && (
+      {isLoading && <Loader />}
+      {actorData.length > 0 ? (
         <ActorList>
           {actorData.map(actor => {
             const { id, profile_path, name, character } = actor;
@@ -41,6 +47,8 @@ export const Cast = () => {
             );
           })}
         </ActorList>
+      ) : (
+        <b>There is no info about actors</b>
       )}
     </>
   );
