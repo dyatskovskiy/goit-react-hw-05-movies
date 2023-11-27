@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const MovieItem = styled.div`
@@ -18,4 +19,10 @@ export const CardInfo = styled.div`
   font-size: 16px;
   padding: 5px 0;
   height: 79px;
+`;
+
+export const StyledLink = styled(Link)`
+  height: 100%;
+  text-decoration: none;
+  color: #1d1d1d;
 `;

@@ -1,20 +1,30 @@
-import { CardInfo, MovieItem, MovieItemImage } from './Movie.styled';
+import { useLocation } from 'react-router-dom';
+import {
+  CardInfo,
+  MovieItem,
+  MovieItemImage,
+  StyledLink,
+} from './Movie.styled';
 
-export const Movie = ({ title, poster }) => {
+export const Movie = ({ id, title, poster }) => {
+  const location = useLocation();
+
   return (
-    <MovieItem>
-      <MovieItemImage
-        src={
-          poster
-            ? `http://image.tmdb.org/t/p/w500/${poster}`
-            : 'https://www.kevingage.com/assets/clapboard.png'
-        }
-        alt={title}
-      />
+    <StyledLink to={`/movies/${id}`} state={{ from: location }}>
+      <MovieItem>
+        <MovieItemImage
+          src={
+            poster
+              ? `http://image.tmdb.org/t/p/w500/${poster}`
+              : 'https://www.kevingage.com/assets/clapboard.png'
+          }
+          alt={title}
+        />
 
-      <CardInfo>
-        <p>{title}</p>
-      </CardInfo>
-    </MovieItem>
+        <CardInfo>
+          <p>{title}</p>
+        </CardInfo>
+      </MovieItem>
+    </StyledLink>
   );
 };

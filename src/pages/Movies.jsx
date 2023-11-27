@@ -9,7 +9,6 @@ export default function Movies() {
   const [params] = useSearchParams();
 
   const query = params.get('query') ?? '';
-  console.log(query);
 
   useEffect(() => {
     if (query === '') {
@@ -20,7 +19,6 @@ export default function Movies() {
       try {
         const fetchedMovies = await fetchMoviesByQuery(query);
         setMovies(fetchedMovies);
-        console.log(fetchedMovies);
       } catch (error) {
         alert(error.message);
       }

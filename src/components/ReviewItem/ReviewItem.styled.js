@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Item = styled.li`
   max-width: 650px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   border-radius: 42px;
   background-color: #e0e0e0;
