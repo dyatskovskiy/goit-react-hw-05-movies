@@ -4,9 +4,9 @@ import {
   MovieItem,
   MovieItemImage,
   StyledLink,
-} from './Movie.styled';
+} from './MovieCard.styled';
 
-export const Movie = ({ id, title, poster }) => {
+export const MovieCard = ({ id, title, poster }) => {
   const location = useLocation();
 
   return (

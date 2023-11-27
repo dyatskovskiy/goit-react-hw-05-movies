@@ -7,6 +7,9 @@ export const MovieItem = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  -webkit-box-shadow: inset 0px -21px 31px -13px #675101;
+  -moz-box-shadow: inset 0px -21px 31px -13px #675101;
+  box-shadow: inset 0px -21px 31px -13px #675101;
 `;
 
 export const MovieItemImage = styled.img`

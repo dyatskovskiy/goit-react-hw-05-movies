@@ -10,6 +10,7 @@ export const HeaderLayout = styled.header`
   height: 40 px;
   padding: 24px;
   margin-bottom: 40px;
+
   -webkit-box-shadow: 0px 12px 93px -3px #675101;
   -moz-box-shadow: 0px 12px 93px -3px #675101;
   box-shadow: 0px 12px 93px -3px #675101;
