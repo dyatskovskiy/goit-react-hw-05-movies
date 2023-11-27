@@ -1,6 +1,6 @@
-import { useParams, Outlet } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetailsById } from '../../utils/movies-api';
-import { useEffect, useState } from 'react';
 import {
   MovieLayout,
   MovieTitle,
@@ -8,12 +8,15 @@ import {
   Overview,
   GenresTitle,
   Genres,
+  StyledBackLink,
 } from './MovieDetails.styled';
 import { Information } from 'components/Information/Information';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const location = useLocation();
+  const prevPage = useRef(location);
 
   useEffect(() => {
     async function getMovieDetails() {
@@ -31,6 +34,9 @@ export default function MovieDetails() {
     <>
       {movie && (
         <>
+          <StyledBackLink to={prevPage.current.state?.from ?? '/'}>
+            <span>Go back</span>
+          </StyledBackLink>
           <MovieLayout>
             <img
               src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
