@@ -14,5 +14,10 @@ export const StyledLink = styled(Link)`
   color: black;
   font-size: 24px;
   text-decoration: none;
-  width: 60px;
+  width: 150px;
+  height: 30px;
+  color: #252525;
+  background-color: #dfdfdf;
+  border-radius: 20px;
+  text-align: center;
 `;

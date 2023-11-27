@@ -6,6 +6,7 @@ export const MovieLayout = styled.div`
   margin: 0 auto;
   gap: 24px;
 `;
+
 export const StyledBackLink = styled(Link)`
   margin-bottom: 20px;
   display: block;
@@ -14,10 +15,11 @@ export const StyledBackLink = styled(Link)`
   text-align: center;
   width: 100px;
   cursor: pointer;
-  background-color: #ff6766;
-  color: #fff;
+  background-color: #7f2221;
+  color: #f3f3f3;
   transition: all 0.3s;
   position: relative;
+  border-radius: 4px;
 
   & span {
     transition: all 0.3s;
@@ -71,22 +73,32 @@ export const StyledBackLink = styled(Link)`
 
 export const MovieTitle = styled.h2`
   font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 4px;
 `;
 
 export const OverviewTitle = styled.h3`
-  font-size: 32px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 24px;
 `;
 
 export const Overview = styled.p`
-  font-size: 20px;
+  font-size: 16px;
+  max-width: 500px;
+  margin-bottom: 40px;
 `;
 
 export const GenresTitle = styled.h3`
-  font-size: 32px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 24px;
 `;
 
 export const Genres = styled.ul`
-  list-style: none;
+  padding-left: 20px;
+  list-style: unset;
   display: flex;
-  gap: 8px;
+  gap: 32px;
 `;

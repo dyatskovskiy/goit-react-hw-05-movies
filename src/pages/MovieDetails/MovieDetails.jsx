@@ -42,13 +42,13 @@ export default function MovieDetails() {
       {movie && (
         <>
           <StyledBackLink to={prevPage.current.state?.from ?? '/'}>
-            <span>Go back</span>
+            <span>&lArr; Go back</span>
           </StyledBackLink>
           <MovieLayout>
             <img
               src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
-              width="300"
+              width="250"
             />
 
             <div>

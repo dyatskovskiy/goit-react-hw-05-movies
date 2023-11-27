@@ -4,6 +4,7 @@ import { SharedLayout } from './SharedLayout/SharedLayout';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
 import { NotFoundTitle } from './NotFoundPage/NotFoundPage';
+import { SnowBackround } from './MagicBackround/SnowBackround';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
@@ -23,6 +24,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFoundTitle />} />
       </Routes>
+      <SnowBackround />
     </Suspense>
   );
 };

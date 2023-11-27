@@ -7,9 +7,8 @@ export const Item = styled.li`
   margin-right: auto;
   padding: 20px;
   border-radius: 42px;
-  background-color: #e0e0e0;
-  box-shadow: 21px 21px 42px #c1c1c1, -21px -21px 42px #ffffff;
-
+  background-color: #020b1c;
+  box-shadow: 21px 21px 42px #79797985, -21px -21px 42px #79797985;
   &:last-child {
     margin-bottom: 0;
   }
@@ -19,10 +18,11 @@ export const AuthorName = styled.p`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #c5c5c5de;
 `;
 
 export const ReviewText = styled.p`
   font-size: 16px;
   line-height: 1.6;
-  color: #2b2b2b;
+  color: #c1b7b7ed;
 `;

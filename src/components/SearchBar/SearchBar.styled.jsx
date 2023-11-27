@@ -7,7 +7,7 @@ export const SearchForm = styled.form`
   align-items: center;
   width: 100%;
   max-width: 600px;
-  background-color: #fff;
+  background-color: #7c6eb521;
   border-radius: 3px;
   overflow: hidden;
 `;
@@ -21,9 +21,12 @@ export const SearchFormInput = styled.input`
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
+  background-color: transparent;
+  color: #cacaca;
   &::placeholder {
     font: inherit;
     font-size: 18px;
+    color: #acacac;
   }
 `;
 
@@ -36,6 +39,7 @@ export const SearchButton = styled.button`
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  background-color: transparent;
 
   &:hover {
     opacity: 1;
@@ -43,6 +47,6 @@ export const SearchButton = styled.button`
 `;
 
 export const SearchIcon = styled(BiSearchAlt)`
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 `;
