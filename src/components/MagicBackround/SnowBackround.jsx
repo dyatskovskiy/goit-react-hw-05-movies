@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import Particles from 'react-particles';
-import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`,
+import { loadSlim } from 'tsparticles-slim';
 
 export const SnowBackround = () => {
   const particlesInit = useCallback(async engine => {
