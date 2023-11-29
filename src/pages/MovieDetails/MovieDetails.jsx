@@ -46,7 +46,11 @@ export default function MovieDetails() {
           </StyledBackLink>
           <MovieLayout>
             <img
-              src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `http://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                  : 'https://astatic.ccmbg.com/ccmcms_linternaute/dist/public/public-assets/img/default/cine-defaut-1.jpg'
+              }
               alt={movie.title}
               width="250"
             />
