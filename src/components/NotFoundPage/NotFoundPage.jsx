@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button, Label, Text, Title, Wrapper } from './NotFoundPage.styled';
 
-export const NotFoundTitle = () => {
+export default function NotFoundTitle() {
   return (
     <Wrapper>
       <Label>404</Label>
@@ -15,4 +15,4 @@ export const NotFoundTitle = () => {
       </Link>
     </Wrapper>
   );
-};
+}

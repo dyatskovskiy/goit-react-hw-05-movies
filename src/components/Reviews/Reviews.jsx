@@ -4,7 +4,7 @@ import { fetchReviews } from 'utils/movies-api';
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 import { Loader } from 'components/Loader/Loader';
 
-export const Reviews = () => {
+export default function Reviews() {
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
@@ -44,4 +44,4 @@ export const Reviews = () => {
       )}
     </ul>
   );
-};
+}
